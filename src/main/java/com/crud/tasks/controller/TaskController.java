@@ -9,10 +9,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 @RestController
-@RequestMapping("/v1/task")
+@RequestMapping("/v1/task/")
 public class TaskController {
-    @RequestMapping(method = RequestMethod.GET, value = "getTask")
-    public List<TaskDto> getTask() {
+    @RequestMapping(method = RequestMethod.GET, value = "getTasks")
+    public List<TaskDto> getTasks() {
         return new ArrayList<>();
     }
     @RequestMapping(method = RequestMethod.GET, value = "getTask")
