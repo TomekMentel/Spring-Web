@@ -12,5 +12,11 @@ public class TrelloCardDto {
     private String description;
     private String pos;
     private String listId;
+    private TrelloBadgesDto votes;
+    private TrelloBadgesDto badgesDto;
+    private AttachmentsByType attachments;
+    private Trello trello;
+    private Trello board;
+    private Trello card;
 }
 

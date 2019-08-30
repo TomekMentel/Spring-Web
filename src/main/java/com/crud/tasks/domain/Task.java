@@ -10,10 +10,6 @@ import javax.persistence.*;
 @Entity(name = "tasks")
 public class Task {
 
-    public Task(String title, String content) {
-        this.title = title;
-        this.content = content;
-    }
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
@@ -21,5 +17,9 @@ public class Task {
     private String title;
     @Column(name = "description")
     private String content;
+    public Task(String title, String content) {
+        this.title = title;
+        this.content = content;
+    }
 
 }

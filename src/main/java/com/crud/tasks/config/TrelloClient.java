@@ -6,8 +6,6 @@ import com.crud.tasks.domain.TrelloCardDto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.client.RestClientException;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.util.UriComponentsBuilder;
@@ -55,10 +53,10 @@ public class TrelloClient {
                 .queryParam("name", trelloCardDto.getName())
                 .queryParam("desc", trelloCardDto.getDescription())
                 .queryParam("pos", trelloCardDto.getPos())
-                .queryParam("idList", trelloCardDto.getListId()).build().encode().toUri();
-        return restTemplate.postForObject(url,null, CreatedTrelloCard.class);
+                .queryParam("idList", trelloCardDto.getListId())
+                .build().encode().toUri();
+        return restTemplate.postForObject(url, null, CreatedTrelloCard.class);
     }
-
 
     private URI getUri() {
         URI url;
@@ -70,6 +68,3 @@ public class TrelloClient {
         return url;
     }
 }
-
-
-
