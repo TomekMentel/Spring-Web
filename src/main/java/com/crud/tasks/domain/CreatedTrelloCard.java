@@ -43,6 +43,5 @@ public class CreatedTrelloCard {
     }
 
    public CreatedTrelloCard(String id, String name, String shortUrl) {
-
     }
 }

@@ -21,7 +21,48 @@ public class TrelloCardDto {
     private Trello board;
     private Trello card;
 
+    public String getName() {
+        return name;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public String getPos() {
+        return pos;
+    }
+
+    public String getListId() {
+        return listId;
+    }
+
+    public TrelloBadgesDto getVotes() {
+        return votes;
+    }
+
+    public TrelloBadgesDto getBadgesDto() {
+        return badgesDto;
+    }
+
+    public AttachmentsByType getAttachments() {
+        return attachments;
+    }
+
+    public Trello getTrello() {
+        return trello;
+    }
+
+    public Trello getBoard() {
+        return board;
+    }
+
+    public Trello getCard() {
+        return card;
+    }
+
     public TrelloCardDto(String name, String description, String pos, String listId) {
+
     }
 }
 

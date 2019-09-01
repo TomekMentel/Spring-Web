@@ -54,7 +54,6 @@ public class TrelloClientTest {
         Assert.assertEquals("test_board", fetchedTrelloBoards.get(0).getName());
         Assert.assertEquals(new ArrayList<>(), fetchedTrelloBoards.get(0).getLists());
     }
-
     @Test
     public void shouldCreateCard() throws URISyntaxException {
         //Given
@@ -64,7 +63,7 @@ public class TrelloClientTest {
                 "top",
                 "test_id"
         );
-        URI uri = new URI("http://test.com/cards?key=test&token=test&name=Test%20task&desc=Test%20Description&pos=top&idList=test_id");
+        URI uri = new URI("http://test.com/cards?key=test&token=test&name&desc&pos&idList");
         CreatedTrelloCard createdTrelloCard = new CreatedTrelloCard(
                 "1",
                 "Test task",
@@ -74,8 +73,8 @@ public class TrelloClientTest {
         //When
         CreatedTrelloCard newCard = trelloClient.createNewCard(trelloCardDto);
         //Then
-        Assert.assertEquals(1, newCard.getId());
+        Assert.assertEquals("1", newCard.getId());
         Assert.assertEquals("Test task", newCard.getName());
-        Assert.assertEquals("http//test.com", newCard.getShortUrl());
+        Assert.assertEquals("http://test.com", newCard.getShortUrl());
     }
 }
