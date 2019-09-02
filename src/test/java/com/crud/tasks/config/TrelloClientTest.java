@@ -54,6 +54,7 @@ public class TrelloClientTest {
         Assert.assertEquals("test_board", fetchedTrelloBoards.get(0).getName());
         Assert.assertEquals(new ArrayList<>(), fetchedTrelloBoards.get(0).getLists());
     }
+
     @Test
     public void shouldCreateCard() throws URISyntaxException {
         //Given
