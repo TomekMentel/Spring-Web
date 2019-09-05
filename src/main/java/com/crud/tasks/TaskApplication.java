@@ -14,5 +14,3 @@ public class TaskApplication {//extends SpringBootServletInitializer {
     //protected SpringApplicationBuilder configure (SpringApplicationBuilder aplication){
 	  //  return aplication.sources(TaskApplication.class);
     }
-
-}
