@@ -21,6 +21,9 @@ public class TrelloCardDto {
     private Trello board;
     private Trello card;
 
+    public TrelloCardDto(String name) {
+        this.name=name;
+    }
     public TrelloCardDto(String name, String description, String pos, String listId) {
     }
 
@@ -63,5 +66,6 @@ public class TrelloCardDto {
     public Trello getCard() {
         return card;
     }
-}
 
+
+}
