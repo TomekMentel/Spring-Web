@@ -26,12 +26,13 @@ public class SimpleEmailService {
             LOGGER.error("Failed to proces email sending", e.getMessage(), e);
         }
     }
+
     private SimpleMailMessage createMailMessage(final Mail mail) {
         SimpleMailMessage mailMessage = new SimpleMailMessage();
         mailMessage.setTo(mail.getMailTo());
         mailMessage.setSubject(mail.getSubject());
         mailMessage.setText(mail.getMessage());
-        if (mail.getToCc()!=null) {
+        if (mail.getToCc() != null) {
             mailMessage.setCc(mail.getToCc());
         }
         return mailMessage;
