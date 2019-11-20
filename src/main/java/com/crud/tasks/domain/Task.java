@@ -23,5 +23,9 @@ public class Task {
         this.title = title;
         this.content = content;
     }
-
+    public Task(Long id,String title,String content){
+        this.id=id;
+        this.title=title;
+        this.content=content;
+    }
 }
